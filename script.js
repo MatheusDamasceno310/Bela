@@ -151,3 +151,11 @@ function mudarPoema(){
         
     }
 }
+
+function voltarPoema(){
+    const container2 = document.getElementById('container2');
+    container2.style.display='flex';
+
+    const container3 = document.getElementById('container3');
+    container3.style.top='-400px';
+}

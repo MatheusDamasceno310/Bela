@@ -92,7 +92,7 @@ body{
 
 .coracao{
     position: absolute;
-    top: 54%;
+    top: 70%;
     left: 50%;
     width: 30px;
     height: 30px;
@@ -102,7 +102,6 @@ body{
     transition: transform 0.5s ease-in-out 1s;
     box-shadow: 0 0 10px var(--shadow-color);
     cursor: pointer;
-    margin-top: 3vh;
 }
 
 .coracao::before,
@@ -251,7 +250,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 700px;
+    height: 90vh;
     background-color: var(--primary);
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
@@ -263,6 +262,18 @@ body{
     font-size: 100px;
     text-align: center;
     cursor: default;
+}
+
+#container3 > h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
 }
 
 #container3 > p{
@@ -285,11 +296,11 @@ body{
     display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     
     .coracao{
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 50%;
         width: 30px;
         height: 30px;
@@ -299,7 +310,6 @@ body{
         transition: transform 0.5s ease-in-out 1s;
         box-shadow: 0 0 10px var(--shadow-color);
         cursor: pointer;
-        margin-top: 10px;
     }
 
     .papel{
