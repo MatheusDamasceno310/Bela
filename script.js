@@ -43,8 +43,8 @@ function abrirEnvelope() {
         const div = document.getElementById('fotoMovendo');
             let posX = window.innerWidth / 2 - 50; // Começa no centro
             let posY = window.innerHeight / 2 - 50; // Começa no centro
-            let velocityX = 8; // Velocidade horizontal
-            let velocityY = 8; // Velocidade vertical
+            let velocityX = 5; // Velocidade horizontal
+            let velocityY = 5; // Velocidade vertical
 
             function moveDiv() {
                 posX += velocityX;
@@ -126,7 +126,7 @@ function aparecerPoema() {
     container2.style.display='none';
 
     const container3 = document.getElementById('container3');
-    container3.style.top='50%';
+    container3.style.top='50vh';
 }
 
 let mudarPoemaN = 0;
