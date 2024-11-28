@@ -9,6 +9,11 @@
     --heart-color: rgb(255, 0, 0);
 }
 
+::-webkit-scrollbar {
+    width: 0px; 
+    height: 0px;
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -17,13 +22,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 #container1{
-    height: 100vh;
+    height: 20vh;
     display: grid;
     place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: block;
 }
 
 #container1 > .exterior{
@@ -56,7 +67,7 @@ body{
     border-top: 130px solid transparent;
     border-left: 150px solid var(--envelope-color);
     border-right: 150px solid var(--envelope-color);
-    border-bottom: 100px solid var(--envelope-color);
+    border-bottom: 102px solid var(--envelope-color);
     bottom: 0;
 }
 
@@ -81,7 +92,7 @@ body{
 
 .coracao{
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
     width: 30px;
     height: 30px;
@@ -91,6 +102,7 @@ body{
     transition: transform 0.5s ease-in-out 1s;
     box-shadow: 0 0 10px var(--shadow-color);
     cursor: pointer;
+    margin-top: 3vh;
 }
 
 .coracao::before,
@@ -144,7 +156,8 @@ body{
     transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
-    z-index: 0;
+    z-index: 1;
+    display: none;
 }
 
 #fotoMovendo {
@@ -167,10 +180,14 @@ body{
 #gif1 {
     position: absolute;
     bottom: 10px;
-    width: 1600px;
-    height: 700px;
-    left: -20px;
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
+    margin-left: -20px;
+    z-index: 1;
 }
 
 #gif1 > img{
@@ -180,10 +197,14 @@ body{
 
 #iloveyou{
     position: absolute;
-    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+}
+
+#iloveyou > img{
+    width: 100vw;
 }
 
 #container2{
@@ -191,30 +212,33 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 4;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px;
-    justify-content: center;
     display: none;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    justify-content: center;
+    background: rgba(42, 42, 42, 0.511);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
+
 #container2 > div{
-    flex: 1 1 200px;
-    margin: 5px;
+    flex: 0 0 200px;
+    margin: 10px;
 }
 
 #container2 > div > video{
     width: 200px;
     height: 410px;
-    margin-top: -20px;
 }
 
 #container2 > div > img {
     width: 200px;
-    height: 367px;
+    height: 356px;
+    padding-top: 27px;
 }
 
 #poeminha{
@@ -259,4 +283,65 @@ body{
     font-size: 90px;
     color: var(--primary);
     display: none;
+}
+
+@media (max-width: 500px) {
+    
+    .coracao{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        background: var(--heart-color);
+        z-index: 4;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: transform 0.5s ease-in-out 1s;
+        box-shadow: 0 0 10px var(--shadow-color);
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .papel{
+        right: 20%;
+        bottom: 0;
+        width: 54%;
+        height: 82%;
+        background: var(--primary);
+        transition: all 1.5s ease-in-out;
+        padding: 20px 10px;
+        box-shadow: 0 0 10px var(--shadow-color);
+    }
+
+    .papel > .texto{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 10px;
+        color: var(--texto-color);
+        text-align: left;
+    }
+
+    #iloveyou > img{
+        position: absolute;
+        width: 140vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #container2{
+        flex-direction: row;
+    }
+
+    #container2 > div > video{
+        width: 100vw;
+        height: 90vh;
+        margin: 5vh 5vw;
+    }
+
+    #container2 > div > img{
+        width: 84vw;
+        height: 90vh;
+        margin: 5vh 5vw;
+    }
+
 }

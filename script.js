@@ -43,8 +43,8 @@ function abrirEnvelope() {
         const div = document.getElementById('fotoMovendo');
             let posX = window.innerWidth / 2 - 50; // Começa no centro
             let posY = window.innerHeight / 2 - 50; // Começa no centro
-            let velocityX = 5; // Velocidade horizontal
-            let velocityY = 5; // Velocidade vertical
+            let velocityX = 10; // Velocidade horizontal
+            let velocityY = 10; // Velocidade vertical
 
             function moveDiv() {
                 posX += velocityX;
